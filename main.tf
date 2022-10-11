@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "mybucket09"
+  bucket = "mybucket09lenna"
   acl    = "private"
   tags = {
-    Name        = "mybucket09"
+    Name        = "mybucket09lenna"
     Environment = "dev"
   }
 }
@@ -26,7 +26,7 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
         "s3.DeleteBucket"
       ],
       "Resource": [
-        "arn:aws:s3:::mybucket09/*"
+        "arn:aws:s3:::mybucket09lenna/*"
       ]
     }
   ]
