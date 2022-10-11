@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "jenkins_csv_upload_10_09"
+  bucket = "mybucket09"
   acl    = "private"
   tags = {
-    Name        = "jenkins_csv_upload_10_09"
+    Name        = "mybucket09"
     Environment = "dev"
   }
 }
@@ -26,7 +26,7 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
         "s3.DeleteBucket"
       ],
       "Resource": [
-        "arn:aws:s3:::jenkins_csv_upload_10_09/*"
+        "arn:aws:s3:::mybucket09/*"
       ]
     }
   ]
